@@ -20,6 +20,7 @@ console.log(Math.trunc(multply / (10**8)));
 
 console.log("\n lesson 3 ------------\n");
 
+//задача 1
 let lang = "en";
 
 //через if
@@ -37,7 +38,6 @@ if (lang == "ru") {
     console.log("Я не говорю на этом языке");
 }
 
-
 //через switch
 switch (lang) {
     case "ru":
@@ -51,7 +51,9 @@ switch (lang) {
 }
 
 // через многомерный массив без ифов и switch
-
 let langArr = [["понедельник, вторник, среда, четверг, пятница, суббота и воскресенье"], ["Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"]];
-
 lang == "ru" ? console.log(langArr[0]) : lang == "en" ? console.log(langArr[1]) : console.log("Я не говорю на этом языке");
+
+//задача 2
+let namePerson= "Артем";
+namePerson == "Артем" ? console.log("директор") : namePerson == "Александр"? console.log("преподаватель") : console.log("студент");
