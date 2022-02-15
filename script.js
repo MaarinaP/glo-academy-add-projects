@@ -90,20 +90,28 @@ console.log("\n lesson 5 ------------\n");
 let arr = ["235", "362", "2", "146", "48567", "236", "8975"];
 
 //console all numbers from array that starts with 2 and 4
-for (let i=0; i < arr.length; i++) {
+for (let i = 0; i < arr.length; i++) {
     if (arr[i].charAt(0) == 2 || arr[i].charAt(0) == 4) {
         console.log(arr[i]);
     }   
 }
 
+//using .filter()
+
+let arr2 = ["125", "289", "3456", "489", "232", "6", "48956"];
+
+const newArr = arr2.filter(number => number.charAt(0) == 2 || number.charAt(0) == 4);
+console.log(newArr);
+
+console.log("\n ------------\n");
 //task 2
 
 //find prime numbers and console their factors
 for  (let i = 2; i < 101; i++) {
-    if (i !== 2 && i % 2 === 0) continue; 
-    if (i !== 3 && i % 3 === 0) continue; 
-    if (i !== 5 && i % 5 === 0) continue;
-    if (i !== 7 && i % 7 === 0) continue;  
+    if (i !== 2 && i % 2 === 0) {continue;}     
+    if (i !== 3 && i % 3 === 0) {continue;} 
+    if (i !== 5 && i % 5 === 0) {continue;}
+    if (i !== 7 && i % 7 === 0) {continue;} 
 
     for(let j = 2; j < 101; j++) {
     
