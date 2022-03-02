@@ -121,3 +121,27 @@ for  (let i = 2; i < 101; i++) {
     }
 }
 
+//lesson 16
+
+console.log("\n lesson 16 ------------\n");
+
+class First {
+    constructor() {
+    }
+
+    hello() {
+        console.log(`Привет я метод родителя!`);
+    }    
+}
+
+class Second extends First {
+
+    hello() {
+        // First.prototype.hello();
+        super.hello();
+        console.log(`А я наследуемый метод!`);
+    }
+}
+
+const second2 = new Second();
+second2.hello();
