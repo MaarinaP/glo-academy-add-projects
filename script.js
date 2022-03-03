@@ -145,3 +145,24 @@ class Second extends First {
 
 const second2 = new Second();
 second2.hello();
+
+//lesson 19
+
+console.log("\n lesson 19 ------------\n");
+
+const input = document.querySelector("input");
+const text = document.querySelector("p");
+
+function debounce(func, timeout = 300){
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+}
+
+const enterText = () => {
+    text.textContent = input.value;
+};    
+
+input.addEventListener("input", debounce(() => enterText()));
